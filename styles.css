@@ -14,11 +14,16 @@ body{
 }
 
 .page{
-  height:100vh;          /* instead of min-height */
+  min-height: 100vh;   /* was height:100vh */
   display:flex;
   flex-direction:column;
   padding:28px;
-  overflow:hidden;       /* safety net */
+  overflow: visible;   /* was overflow:hidden */
+}
+
+body{
+  margin:0;
+  overflow-x: hidden; /* prevents horizontal “micro scroll” */
 }
 
 /* --- Site Header --- */
@@ -134,7 +139,8 @@ body{
 .layout{
   width:min(1200px, 94vw);
   margin: 0 auto;              /* center inside the white stage */
-  height: min(600px, 100%);    /* keep it contained */
+  height: 100%;
+  min-height: 0;
   display:grid;
   grid-template-columns: 1fr 460px;
   gap:18px;
@@ -534,4 +540,113 @@ body{
 .tripCluster span {
   font-size: 16px;
   line-height: 1;
+}
+
+/* ---------- Responsive (phone) layout ---------- */
+:root{
+  --gap: 18px;
+  --stageMax: 1200px;
+}
+
+/* keep stage centered */
+.stage{
+  width: 100%;
+  max-width: var(--stageMax);
+  margin: 0 auto;
+}
+
+/* This assumes you have a wrapper for map+detail like .grid (see HTML section) */
+.grid{
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: var(--gap);
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Ensure map/detail fill nicely on desktop */
+.map{
+  width: 100%;
+  height: min(560px, 68vh);
+}
+
+.detailPanel{
+  width: 100%;
+  height: min(560px, 68vh);
+  overflow: auto;
+  background: #fff;
+  border: 2px solid rgba(0,0,0,.15);
+  box-shadow: 0 12px 40px rgba(0,0,0,.12);
+}
+
+/* MOBILE: stack vertically and use sane heights */
+@media (max-width: 900px){
+  .page{ padding: 14px; }
+
+  .grid{
+    grid-template-columns: 1fr;   /* stack */
+  }
+
+  .map{
+    height: 52vh;                 /* map takes top half */
+    min-height: 360px;
+  }
+
+  .detailPanel{
+    height: auto;                 /* details below */
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+/* even smaller phones */
+@media (max-width: 430px){
+  .map{ min-height: 320px; height: 50vh; }
+}
+
+/* ---------------------------
+   FIX: stage/layout clipping
+--------------------------- */
+
+/* Let the stage consume remaining viewport height correctly */
+.page{
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden; /* keep the page from scrolling */
+}
+
+/* Stage becomes the flexible container */
+.stage{
+  flex: 1;
+  min-height: 0;     /* CRITICAL: allows children to shrink instead of clipping */
+  display: flex;     /* so .layout can fill it */
+}
+
+/* Make the grid fill the stage */
+.layout{
+  flex: 1;
+  height: 100% !important;
+  min-height: 0;
+}
+
+/* Allow grid children to shrink properly */
+.mapWrap,
+.detailPanel{
+  min-height: 0;
+}
+
+/* Force map + panel to fill available height */
+.map{
+  height: 100% !important;
+}
+
+/* Keep the right panel scrollable internally (not the whole page) */
+.detailPanel{
+  height: 100% !important;
+  overflow: auto;
+}
+
+/* Kill tiny horizontal overflow bars */
+html, body{
+  overflow-x: hidden;
 }
