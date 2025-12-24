@@ -3,7 +3,7 @@ window.LOCATIONS = [
     id: "cz400-heli-sunset",
     name: "Touchdown in Daytona",
     coords: [29.1919290, -81.0678660],
-    trip: "No Trip",
+    trip: "no_trip",
     photos: [{ src: "./photos/coke-zero-400-2025.jpg", caption: "This photo was taken at the beginning of the 2025 Coke Zero 400 race." }]
   },
   {
@@ -21,4 +21,5 @@ window.LOCATIONS = [
     photos: [{ src: "./photos/yellow-taxi-nyc.jpg", caption: "A yellow taxi highlighted on the dark streets of New York City." }]
   },
 ];
+
 
