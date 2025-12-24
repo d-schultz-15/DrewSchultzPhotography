@@ -25,8 +25,8 @@
     // --- Trip color map ---
     const TRIP_STYLES = {
       east_coast: { label: "East Coast Road Trip", color: "#d63b3b" },
-      florida: { label: "Florida", color: "#2f6fd6" },
-      other_trip: { label: "Other Trip", color: "#7b4bd6" },
+      cross_country: {label: "Cross Country Road Trip", color: "#f2e311"},
+      no_trip: { label: "Not From a Trip", color: "#7b4bd6" },
       default: { label: "Other", color: "#7b4bd6" }
     };
 
@@ -343,3 +343,4 @@
     }
   });
 })();
+
