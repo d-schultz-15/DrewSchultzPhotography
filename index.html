@@ -51,27 +51,20 @@
 
 
     <main class="stage">
-      <div class="layout">
-        <!-- Left: Map -->
-        <div class="mapWrap">
-          <!-- Decorative folded map frame (only around the map) -->
-          <div class="foldFrame" aria-hidden="true"></div>
-          <div id="map" class="map" aria-label="Interactive map"></div>
-        </div>
+      <div class="foldFrame" aria-hidden="true"></div>
 
-        <!-- Right: Detail panel -->
-        <aside class="detailPanel" aria-label="Photo details">
-          <div id="detail" class="detailInner">
-            <div class="detailEmpty">
-              <div class="detailEmptyTitle">Click a pin</div>
-              <div class="detailEmptySub">
-                Select a location on the map to view photos and details here.
-              </div>
-            </div>
+      <div class="grid">
+        <div id="map" class="map" aria-label="Interactive map"></div>
+
+        <aside id="detail" class="detailPanel" aria-label="Photo details">
+          <div class="detailEmpty">
+            <h2>Click a pin</h2>
+            <p>Select a location on the map to view photos and details here.</p>
           </div>
         </aside>
       </div>
     </main>
+
   </div>
 
   <script
