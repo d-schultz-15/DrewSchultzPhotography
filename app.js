@@ -24,8 +24,12 @@
 
     // --- Trip color map ---
     const TRIP_STYLES = {
-      east_coast: { label: "East Coast Road Trip", color: "#d63b3b" },
-      cross_country: {label: "Cross Country Road Trip", color: "#f2e311"},
+      east_coast: { label: "East Coast 2025", color: "#d63b3b" },
+      north_south: {label: "North South 2024", color: "#033321"},
+      cross_country: {label: "Cross Country 2023", color: "#f2e311"},
+      carribean_23: {label: "Carribean Cruise 2023", color: "#F2A007"},
+      europe_22: {label: "Europe 2022", color: "#95D66F"},
+      las_vegas: {label: "Las Vegas 2022", color: "#6FC0D6"},
       no_trip: { label: "Not From a Trip", color: "#7b4bd6" },
       default: { label: "Other", color: "#7b4bd6" }
     };
@@ -282,8 +286,46 @@
     const clusters = L.markerClusterGroup({
       showCoverageOnHover: false,
       spiderfyOnMaxZoom: true,
-      disableClusteringAtZoom: 15
+      disableClusteringAtZoom: 15,
+
+      iconCreateFunction: (cluster) => {
+        const children = cluster.getAllChildMarkers();
+
+        // Count trips inside this cluster
+        const counts = {};
+        for (const m of children) {
+          const key = m?.options?.tripKey || "default";
+          counts[key] = (counts[key] || 0) + 1;
+        }
+
+        // Pick the dominant trip (highest count)
+        let winner = "default";
+        let best = -1;
+        for (const [key, c] of Object.entries(counts)) {
+          if (c > best) {
+            best = c;
+            winner = key;
+          }
+        }
+
+        const color = (TRIP_STYLES[winner]?.color) || TRIP_STYLES.default.color;
+        const size =
+          children.length < 10 ? 36 :
+          children.length < 50 ? 44 :
+          54;
+
+        return L.divIcon({
+          html: `
+            <div class="tripCluster" style="--clusterColor:${color}; width:${size}px; height:${size}px;">
+              <span>${cluster.getChildCount()}</span>
+            </div>
+          `,
+          className: "tripClusterIcon",
+          iconSize: L.point(size, size)
+        });
+      }
     });
+
 
     // Add markers
     LOCATIONS.forEach((loc) => {
@@ -292,7 +334,8 @@
       bounds.push(loc.coords);
 
       const marker = L.marker(loc.coords, {
-        icon: markerIconForTrip(loc.trip)
+        icon: markerIconForTrip(loc.trip),
+        tripKey: (loc.trip && TRIP_STYLES[loc.trip]) ? loc.trip : "default"
       });
 
       marker.on("click", () => {
@@ -343,4 +386,3 @@
     }
   });
 })();
-
