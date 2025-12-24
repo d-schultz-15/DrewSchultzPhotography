@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Explore the World</title>
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+
+  <!-- MarkerCluster -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
+  />
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="page">
+    <header class="siteHeader">
+      <div class="headerInner">
+        <div class="brandBlock">
+          <div class="brandName">Drew Schultz</div>
+          <div class="brandSub">Photography</div>
+        </div>
+
+        <a
+          class="igLink"
+          href="https://www.instagram.com/drewschultzphotography"
+          target="_blank"
+          rel="noopener"
+        >
+          @drewschultzphotography
+        </a>
+      </div>
+    </header>
+    <div class="instructionBand">
+      <div class="instructionText">Explore the World</div>
+    </div>
+
+
+    <main class="stage">
+      <div class="layout">
+        <!-- Left: Map -->
+        <div class="mapWrap">
+          <!-- Decorative folded map frame (only around the map) -->
+          <div class="foldFrame" aria-hidden="true"></div>
+          <div id="map" class="map" aria-label="Interactive map"></div>
+        </div>
+
+        <!-- Right: Detail panel -->
+        <aside class="detailPanel" aria-label="Photo details">
+          <div id="detail" class="detailInner">
+            <div class="detailEmpty">
+              <div class="detailEmptyTitle">Click a pin</div>
+              <div class="detailEmptySub">
+                Select a location on the map to view photos and details here.
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+
+  <!-- MarkerCluster -->
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+  <!-- Lightbox (full-screen image viewer) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightboxBackdrop" data-close="1"></div>
+
+    <div class="lightboxFrame" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <button class="lightboxClose" type="button" aria-label="Close (Esc)">×</button>
+
+      <button class="lightboxNav lightboxPrev" type="button" aria-label="Previous photo">‹</button>
+
+      <img id="lightboxImg" class="lightboxImg" alt="" />
+
+      <button class="lightboxNav lightboxNext" type="button" aria-label="Next photo">›</button>
+
+      <div id="lightboxCaption" class="lightboxCaption"></div>
+    </div>
+  </div>
+
+</body>
+</html>

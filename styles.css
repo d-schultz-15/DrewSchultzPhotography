@@ -1,0 +1,510 @@
+:root{
+  --bg: #e5e5e5;
+  --frame: #4b4b4b;
+  --ink: rgba(0,0,0,.55);
+  --titleGreen: #245b2c;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background:#1b1b1b;
+}
+
+.page{
+  height:100vh;          /* instead of min-height */
+  display:flex;
+  flex-direction:column;
+  padding:28px;
+  overflow:hidden;       /* safety net */
+}
+
+/* --- Site Header --- */
+.siteHeader{
+  display:flex;
+  justify-content:center;
+  margin-bottom:18px;
+}
+
+.headerInner{
+  width:min(1200px, 94vw);
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  padding: 14px 22px;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(0,0,0,.15);
+  box-shadow: 0 10px 28px rgba(0,0,0,.18);
+}
+
+/* Left: Brand */
+.brandBlock{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+.brandName{
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:.4px;
+  color:#229e35; /* dark green */
+}
+
+.brandSub{
+  font-size:14px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#229e35;
+}
+
+/* --- Instruction band --- */
+.instructionBand{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  margin: 6px 0 18px;
+  color:#229e35;
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+               1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+.instructionText{
+  font-size:36px;
+  font-weight:700;
+  letter-spacing:.6px;
+}
+
+
+/* Right: Meta / instructions */
+.headerMeta{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:4px;
+  text-align:right;
+}
+
+.navHint{
+  font-size:13px;
+  color:rgba(0,0,0,.65);
+}
+
+.igLink{
+  font-size:13px;
+  font-weight:600;
+  color:#229e35; /* your green */
+  text-decoration:none;
+}
+
+.igLink:hover{
+  text-decoration:underline;
+}
+
+/* --- Responsive header --- */
+@media (max-width: 700px){
+  .headerInner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+
+  .headerMeta{
+    align-items:flex-start;
+    text-align:left;
+  }
+}
+
+.stage{
+  flex:1;
+  background: var(--bg);
+  border: 8px solid rgba(255,255,255,.12);
+  padding:24px;
+  min-height:0;
+
+  /* IMPORTANT: stop centering the layout like a floating poster */
+  display:block;
+}
+
+
+/* --- Two-column layout --- */
+.layout{
+  width:min(1200px, 94vw);
+  margin: 0 auto;              /* center inside the white stage */
+  height: min(600px, 100%);    /* keep it contained */
+  display:grid;
+  grid-template-columns: 1fr 460px;
+  gap:18px;
+  align-items:stretch;
+}
+
+/* Left column wrapper */
+.mapWrap{
+  position:relative;
+  min-width:0;
+}
+
+/* Map box */
+.map{
+  width:100%;
+  height:100%;
+  background: var(--frame);
+  border: 2px solid rgba(0,0,0,.25);
+  box-shadow: 0 12px 40px rgba(0,0,0,.25);
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+
+/* Leaflet controls tweak */
+.leaflet-control-zoom a{
+  border-radius:8px;
+}
+
+/* Decorative folded-map outline sitting on top of the map */
+.foldFrame{
+  position:absolute;
+  inset:0;
+  z-index:2;            /* above map */
+  pointer-events:none;  /* clicks go through to map */
+}
+
+.foldFrame::before,
+.foldFrame::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border: 3px solid rgba(0,0,0,.22);
+  opacity:.9;
+}
+
+/* --- Right detail panel --- */
+.detailPanel{
+  background: rgba(255,255,255,.12);
+  border: 2px solid rgba(0,0,0,.25);
+  box-shadow: 0 12px 40px rgba(0,0,0,.18);
+  overflow:auto;              /* ✅ allow scrolling */
+}
+
+
+.detailInner{
+  height:100%;
+  padding:18px;
+  background: rgba(255,255,255,.85);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  overflow:auto;              /* ✅ scroll here */
+}
+
+
+/* empty state */
+.detailEmpty{
+  margin:auto;
+  text-align:center;
+  color:#1d1d1d;
+  opacity:.85;
+  max-width: 340px;
+}
+
+.detailEmptyTitle{
+  font-weight:800;
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.detailEmptySub{
+  font-size:13px;
+  line-height:1.4;
+}
+
+/* header */
+.detailHeader{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.detailTitle{
+  font-weight:800;
+  font-size:22px;
+  color:#111;
+  line-height:1.15;
+}
+
+.detailCount{
+  font-size:12px;
+  color:#444;
+  white-space:nowrap;
+  margin-top:6px;
+}
+
+/* description */
+.detailDesc{
+  font-size:14px;
+  line-height:1.45;
+  color:#222;
+}
+
+/* image region (content-driven, no forced height) */
+.detailMedia{
+  position:relative;
+  display:block;
+  background:transparent;
+  border:none;
+  border-radius:12px;
+  overflow:visible;
+}
+
+.detailImg{
+  display:block;
+  width:auto;
+  max-width:100%;
+  height:auto !important;
+  max-height:45vh;            /* ✅ smaller so header/desc fit too */
+  margin:0 auto;
+  border-radius:12px;
+  border:1px solid rgba(0,0,0,.15);
+}
+
+
+/* caption */
+.detailCaption{
+  font-size:13px;
+  color:#444;
+}
+
+/* nav buttons */
+.detailNavBtn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:38px;
+  height:38px;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,.18);
+  background:rgba(255,255,255,.92);
+  cursor:pointer;
+  font-size:20px;
+  line-height:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  user-select:none;
+}
+
+.detailNavBtn:hover{
+  background:rgba(255,255,255,.98);
+}
+
+.detailPrev{ left:10px; }
+.detailNext{ right:10px; }
+
+/* --- Cluster bubbles: match your green --- */
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large{
+  background-color: rgba(36, 91, 44, 0.25);
+}
+
+.marker-cluster-small div,
+.marker-cluster-medium div,
+.marker-cluster-large div{
+  background-color: rgba(36, 91, 44, 0.65);
+  color: #fff;
+  font-weight: 800;
+}
+
+/* --- Responsive: stack panel under map --- */
+@media (max-width: 980px){
+  .layout{
+    grid-template-columns: 1fr;
+    grid-template-rows: 56vh auto;
+    height:auto;
+  }
+
+  .titlePlate h1{ font-size:32px; }
+  .page{ padding:16px; }
+}
+
+/* --- Custom colored markers (divIcon) --- */
+.tripMarker{
+  background: transparent;
+  border: none;
+}
+
+.tripMarkerDot{
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.25);
+  border: 2px solid rgba(255,255,255,.95);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.tripMarkerInner{
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.95);
+}
+
+/* --- Legend --- */
+.tripLegend{
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.18);
+  font-family: inherit;
+}
+
+.tripLegendTitle{
+  font-weight: 800;
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.tripLegendRow{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.tripLegendSwatch{
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.2);
+}
+
+.tripLegendText{
+  font-size: 12px;
+  color:#222;
+}
+
+/* ----------------------------
+   Lightbox (full-screen viewer)
+---------------------------- */
+.lightbox{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:none;
+}
+
+.lightbox.isOpen{
+  display:block;
+}
+
+.lightboxBackdrop{
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(8px);
+}
+
+.lightboxFrame{
+  position:absolute;
+  inset: 4vh 4vw;                 /* nearly full screen */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.lightboxImg{
+  max-width: 92vw;
+  max-height: 88vh;
+  width:auto;
+  height:auto;
+  border-radius: 10px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.45);
+  background: rgba(255,255,255,.02);
+}
+
+.lightboxCaption{
+  position:absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,.92);
+  font-size: 14px;
+  text-align:center;
+  max-width: 80vw;
+  padding: 8px 12px;
+  background: rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 999px;
+}
+
+.lightboxClose{
+  position:absolute;
+  top: 16px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(0,0,0,.35);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor:pointer;
+}
+
+.lightboxNav{
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(0,0,0,.30);
+  color:#fff;
+  font-size: 26px;
+  cursor:pointer;
+}
+
+.lightboxPrev{ left: 18px; }
+.lightboxNext{ right: 18px; }
+
+.lightboxNav:hover,
+.lightboxClose:hover{
+  background: rgba(0,0,0,.45);
+}
+
+/* ----------------------------
+   Expand icon on detail image
+---------------------------- */
+.detailMedia{
+  position:relative;
+}
+
+.detailExpandBtn{
+  position:absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.18);
+  background: rgba(255,255,255,.92);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 10px 22px rgba(0,0,0,.18);
+}
+
+.detailExpandBtn:hover{
+  background: rgba(255,255,255,.98);
+}
