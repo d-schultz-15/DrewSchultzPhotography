@@ -508,3 +508,30 @@ body{
 .detailExpandBtn:hover{
   background: rgba(255,255,255,.98);
 }
+
+/* Cluster icon container (we use a CSS variable for color) */
+.tripClusterIcon {
+  background: transparent;
+  border: none;
+}
+
+.tripCluster {
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+
+  /* main fill is based on dominant trip color */
+  background: color-mix(in srgb, var(--clusterColor) 70%, white 30%);
+
+  /* ring + subtle depth */
+  border: 6px solid color-mix(in srgb, var(--clusterColor) 55%, black 45%);
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+
+  font-weight: 800;
+  color: rgba(0,0,0,.75);
+}
+
+.tripCluster span {
+  font-size: 16px;
+  line-height: 1;
+}
