@@ -2,6 +2,7 @@
 // Clicking a marker renders details in the right-side panel (no Leaflet popups).
 // Markers are clustered with a count when zoomed out.
 // Includes: trip-colored markers + legend + right-panel carousel + full-screen lightbox.
+// Mobile fix: after clicking a pin, auto-scroll the detail panel into view.
 
 (() => {
   window.addEventListener("DOMContentLoaded", () => {
@@ -25,11 +26,11 @@
     // --- Trip color map ---
     const TRIP_STYLES = {
       east_coast: { label: "East Coast 2025", color: "#d63b3b" },
-      north_south: {label: "North South 2024", color: "#033321"},
-      cross_country: {label: "Cross Country 2023", color: "#f2e311"},
-      carribean_23: {label: "Carribean Cruise 2023", color: "#F2A007"},
-      europe_22: {label: "Europe 2022", color: "#95D66F"},
-      las_vegas: {label: "Las Vegas 2022", color: "#6FC0D6"},
+      north_south: { label: "North South 2024", color: "#033321" },
+      cross_country: { label: "Cross Country 2023", color: "#f2e311" },
+      carribean_23: { label: "Carribean Cruise 2023", color: "#F2A007" },
+      europe_22: { label: "Europe 2022", color: "#95D66F" },
+      las_vegas: { label: "Las Vegas 2022", color: "#6FC0D6" },
       no_trip: { label: "Not From a Trip", color: "#7b4bd6" },
       default: { label: "Other", color: "#7b4bd6" }
     };
@@ -326,7 +327,6 @@
       }
     });
 
-
     // Add markers
     LOCATIONS.forEach((loc) => {
       if (!loc?.coords || loc.coords.length !== 2) return;
@@ -342,6 +342,16 @@
         const zoom = loc.zoom ?? 12;
         map.flyTo(loc.coords, zoom, { animate: true, duration: 0.9 });
         renderDetail(loc);
+
+        // ✅ MOBILE FIX: auto-scroll the detail panel into view on small screens
+        if (window.matchMedia("(max-width: 900px)").matches) {
+          setTimeout(() => {
+            document.getElementById("detail")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+          }, 60);
+        }
       });
 
       clusters.addLayer(marker);
