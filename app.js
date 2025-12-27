@@ -31,6 +31,7 @@
       carribean_23: { label: "Carribean Cruise 2023", color: "#F2A007" },
       europe_22: { label: "Europe 2022", color: "#95D66F" },
       las_vegas: { label: "Las Vegas 2022", color: "#6FC0D6" },
+      europe_19: {label: "Europe 2019", color: "#D16698" },
       utah_18: {label: "Utah 2018", color: "#3127F5" },
       no_trip: { label: "Not From a Trip", color: "#7b4bd6" },
       default: { label: "Other", color: "#7b4bd6" }
