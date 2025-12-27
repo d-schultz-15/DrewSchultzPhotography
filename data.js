@@ -784,7 +784,7 @@ window.LOCATIONS = [
     id: "shenandoah-trail",
     name: "Stony Man",
     coords: [38.598500, -78.371535],
-    trip: "",
+    trip: "east_coast",
     photos: [{
       src: "./photos/shenandoah-trail.jpg",
       caption: "Shot on Canon EOS R50, May 2, 2025 | 35 mm, 1/100, f/16, ISO 100"
@@ -1044,4 +1044,5 @@ window.LOCATIONS = [
     }]
   }
 ];
+
 
