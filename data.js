@@ -1042,7 +1042,60 @@ window.LOCATIONS = [
       src: "./photos/shire.jpg",
       caption: "Shot on iPhone 14, August 12, 2024 |6 mm, 1/2400, f/1.5, ISO 50"
     }]
+  },
+
+  {
+    id: "austria",
+    name: "Morning Hike",
+    coords: [47.929255, 15.096953],
+    trip: "europe_19",
+    photos: [{
+      src: "./photos/austria.jpg",
+      caption: "Shot on iPhone XR, July 3, 2019 |4 mm, 1/950, f/1.8, ISO 25"
+    }]
+  },
+
+  {
+    id: "baby-augustine",
+    name: "Fountain of Youth",
+    coords: [29.906997, -81.315070],
+    trip: "no_trip",
+    photos: [{
+      src: "./photos/baby-augustine.jpg",
+      caption: "Shot on Canon PowerShot SX530 HS, November 21, 2016 |27 mm, 1/125, f/5, ISO 200"
+    }]
+  },
+
+  {
+    id: "omaha-spiral",
+    name: "Big Red One",
+    coords: [49.359108, -0.848278],
+    trip: "europe_19",
+    photos: [{
+      src: "./photos/omaha-spiral.jpg",
+      caption: "Shot on iPhone XR, June 27, 2019 |4 mm, 1/6000, f/1.8, ISO 25"
+    }]
+  },
+
+  {
+    id: "roman-forum",
+    name: "Thundering Jupiter",
+    coords: [41.892527, 12.483441],
+    trip: "europe_19",
+    photos: [{
+      src: "./photos/roman-forum.jpg",
+      caption: "Shot on iPhone XR, June 30, 2019 |4 mm, 1/1800, f/1.8, ISO 25"
+    }]
+  },
+
+  {
+    id: "warm-gradient",
+    name: "Warm Gradient",
+    coords: [36.795022, -111.469227],
+    trip: "las_vegas",
+    photos: [{
+      src: "./photos/warm-gradient.jpg",
+      caption: "Shot on Nikon D5000, March 15, 2022 |22 mm, 1/8, f/5.6, ISO 1600"
+    }]
   }
 ];
-
-
