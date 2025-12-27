@@ -1097,5 +1097,82 @@ window.LOCATIONS = [
       src: "./photos/warm-gradient.jpg",
       caption: "Shot on Nikon D5000, March 15, 2022 |22 mm, 1/8, f/5.6, ISO 1600"
     }]
+  },
+
+  {
+    id: "cimarron",
+    name: "Dan Beard Peak",
+    coords: [36.671266, -105.094597],
+    trip: "other_trip",
+    photos: [{
+      src: "./photos/cimarron.jpg",
+      caption: "Shot on iPhone XR, June 23, 2021 |4 mm, 1/1800, f/1.8, ISO 50"
+    }]
+  },
+
+  {
+    id: "crater-lake",
+    name: "Bulging Lake",
+    coords: [42.911843, -122.125557],
+    trip: "cross_country",
+    photos: [{
+      src: "./photos/crater-lake.jpg",
+      caption: "Shot on Canon PowerShot SX530 HS, June 21, 2023 |10 mm, 1/1000, f/5, ISO 200"
+    }]
+  },
+
+  {
+    id: "kirkjufell",
+    name: "Arrowhead Mountain",
+    coords: [64.924529, -23.307475],
+    trip: "europe_22",
+    photos: [{
+      src: "./photos/kirkjufell.jpg",
+      caption: "Shot on iPhone XR, July 11, 2022 |4 mm, 30, f/1.8, ISO 50"
+    }]
+  },
+
+  {
+    id: "reynisfjara",
+    name: "Twin Peaks",
+    coords: [63.402225, -19.039345],
+    trip: "europe_22",
+    photos: [{
+      src: "./photos/reynisfjara.jpg",
+      caption: "Shot on iPhone XR, July 12, 2022 |4 mm, 1/6000, f/1.8, ISO 25"
+    }]
+  },
+
+  {
+    id: "santa-monica",
+    name: "Toes in the Sand",
+    coords: [34.007976, -118.499306],
+    trip: "cross_country",
+    photos: [{
+      src: "./photos/santa-monica.jpg",
+      caption: "Shot on Canon PowerShot SX530 HS, June 17, 2023 |12 mm, 1/1000, f/5.6, ISO 100"
+    }]
+  },
+
+  {
+    id: "space-needle",
+    name: "Space Needle",
+    coords: [47.620654, -122.348653],
+    trip: "other_trip",
+    photos: [{
+      src: "./photos/space-needle.jpg",
+      caption: "Shot on iPhone XR, November 1, 2019 |4 mm, 1/1000, f/1.8, ISO 25"
+    }]
+  },
+
+  {
+    id: "yosemite-valley",
+    name: "Tunnel View",
+    coords: [37.715842, -119.677161],
+    trip: "cross_country",
+    photos: [{
+      src: "./photos/yosemite-valley.jpg",
+      caption: "Shot on iPhone XR, June 18, 2023 |4 mm, 1/2800, f/1.8, ISO 25"
+    }]
   }
 ];
