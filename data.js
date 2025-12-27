@@ -885,7 +885,7 @@ window.LOCATIONS = [
     coords: [41.011968, -112.223988],
     trip: "utah_18",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/antelope-island.jpg",
       caption: "Shot on Canon PowerShot SX530 HS, July 7, 2018 | 18 mm, 1/1000, f/5, ISO 160"
     }]
   },
@@ -896,7 +896,7 @@ window.LOCATIONS = [
     coords: [37.612179, -112.169748],
     trip: "utah_18",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/bryce-canyon.jpg",
       caption: "Shot on iPhone 6s, July 26, 2018 |4 mm, 1/3000, f/2.2, ISO 25"
     }]
   },
@@ -907,7 +907,7 @@ window.LOCATIONS = [
     coords: [37.567088, -112.221716],
     trip: "utah_18",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/bryce-tree.jpg",
       caption: "Shot on Nikon D5000, July 26, 2018 |18 mm, 1/320, f/10, ISO 200"
     }]
   },
@@ -918,7 +918,7 @@ window.LOCATIONS = [
     coords: [38.429279, -109.929200],
     trip: "utah_18",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/canyonlands.jpg",
       caption: "Shot on Nikon D5000, July 24, 2018 |18 mm, 1/500, f/11, ISO 500"
     }]
   },
@@ -929,7 +929,7 @@ window.LOCATIONS = [
     coords: [38.311842, -111.300016],
     trip: "utah_18",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/capitol-road.jpg",
       caption: "Shot on Nikon D5000, July 25, 2018 |50 mm, 1/125, f/9, ISO 200"
     }]
   },
@@ -940,7 +940,7 @@ window.LOCATIONS = [
     coords: [38.388539, -109.865659],
     trip: "utah_18",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/mesa-arch.jpg",
       caption: "Shot on Nikon D5000, July 24, 2018 |18 mm, 1/250, f/11, ISO 500"
     }]
   },
@@ -951,7 +951,7 @@ window.LOCATIONS = [
     coords: [38.288350, -111.242362],
     trip: "utah_18",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/petroglyphs.jpg",
       caption: "Shot on Nikon D5000, July 25, 2018 |200 mm, 1/200, f/10, ISO 200"
     }]
   },
@@ -962,7 +962,7 @@ window.LOCATIONS = [
     coords: [40.405375, -105.625413],
     trip: "utah_18",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/rocky-mountain.jpg",
       caption: "Shot on Nikon D5000, July 19, 2018 |50 mm, 1/125, f/9, ISO 200"
     }]
   },
@@ -973,7 +973,7 @@ window.LOCATIONS = [
     coords: [38.376327, -109.886142],
     trip: "utah_18",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/sunset-canyon.jpg",
       caption: "Shot on Nikon D5000, July 24, 2018 |18 mm, 1/250, f/4.5, ISO 500"
     }]
   },
@@ -984,7 +984,7 @@ window.LOCATIONS = [
     coords: [38.869975, -104.888395],
     trip: "utah_18",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/window-god.jpg",
       caption: "Shot on Nikon D5000, July 15, 2018 |18 mm, 1/1000, f/4, ISO 640"
     }]
   },
@@ -995,7 +995,7 @@ window.LOCATIONS = [
     coords: [41.891800, -87.620680],
     trip: "north_south",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/chicago.jpg",
       caption: "Shot on iPhone 14, August 11, 2024 |6 mm, 1/1500, f/1.5, ISO 50"
     }]
   },
@@ -1006,7 +1006,7 @@ window.LOCATIONS = [
     coords: [44.009986, -91.252808],
     trip: "north_south",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/lacrosse.jpg",
       caption: "Shot on iPhone 14, August 8, 2024 |6 mm, 1/1400, f/1.5, ISO 50"
     }]
   },
@@ -1017,7 +1017,7 @@ window.LOCATIONS = [
     coords: [43.074669, -89.381939],
     trip: "north_south",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/madison.jpg",
       caption: "Shot on iPhone 14, August 11, 2024 |6 mm, 1/1400, f/1.5, ISO 50"
     }]
   },
@@ -1028,7 +1028,7 @@ window.LOCATIONS = [
     coords: [41.884144, -87.624954],
     trip: "north_south",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/mosaic.jpg",
       caption: "Shot on iPhone 14, August 11, 2024 |6 mm, 1/3200, f/1.5, ISO 50"
     }]
   },
@@ -1039,7 +1039,7 @@ window.LOCATIONS = [
     coords: [35.768114, -83.616319],
     trip: "north_south",
     photos: [{
-      src: "./photos/zion-valley.jpg",
+      src: "./photos/shire.jpg",
       caption: "Shot on iPhone 14, August 12, 2024 |6 mm, 1/2400, f/1.5, ISO 50"
     }]
   }
