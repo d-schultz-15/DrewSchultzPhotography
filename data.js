@@ -66,17 +66,6 @@ window.LOCATIONS = [
   },
 
   {
-    id: "baton-rouge",
-    name: "Bayou Capitol",
-    coords: [30.455529, -91.187285],
-    trip: "cross_country",
-    photos: [{
-      src: "./photos/baton-rouge.jpg",
-      caption: "Shot on Canon PowerShot SX530 HS, June 9, 2023 | 11 mm, 1/320, f/4.5, ISO 100"
-    }]
-  },
-
-  {
     id: "behind-seljalandsfoss",
     name: "Midnight Sun",
     coords: [63.615245, -19.988750],
@@ -396,17 +385,6 @@ window.LOCATIONS = [
   },
 
   {
-    id: "golden-gate-bridge",
-    name: "Look Back at It",
-    coords: [37.832493, -122.479570],
-    trip: "cross_country",
-    photos: [{
-      src: "./photos/golden-gate-bridge.jpg",
-      caption: "Shot on iPhone XR, June 19, 2023 | 4 mm, 1/3000, f/1.8, ISO 25"
-    }]
-  },
-
-  {
     id: "grand-canyon-heli",
     name: "Rocky Landing",
     coords: [36.099579, -112.110895],
@@ -440,17 +418,6 @@ window.LOCATIONS = [
   },
 
   {
-    id: "grindelwald-film",
-    name: "Grindelwald Film",
-    coords: [46.664562, 8.047946],
-    trip: "europe_22",
-    photos: [{
-      src: "./photos/grindelwald-film.jpg",
-      caption: "Shot on FujiFilm QuickSnap 35mm, July 17, 2022 | Superia X-TRA 800 Film"
-    }]
-  },
-
-  {
     id: "grindelwald-gondala",
     name: "Gondala Ride",
     coords: [46.659658, 8.056014],
@@ -480,17 +447,6 @@ window.LOCATIONS = [
     photos: [{
       src: "./photos/half-dome.jpg",
       caption: "Shot on Canon PowerShot SX530 HS, June 18, 2023 | 12 mm, 1/400, f/4.5, ISO 100"
-    }]
-  },
-
-  {
-    id: "hallwilersee",
-    name: "Hall Will",
-    coords: [47.258662, 8.230195],
-    trip: "europe_22",
-    photos: [{
-      src: "./photos/hallwilersee.jpg",
-      caption: "Shot on iPhone XR, July 15, 2022 | 4 mm, 1/3200, f/1.8, ISO 25"
     }]
   },
 
@@ -535,17 +491,6 @@ window.LOCATIONS = [
     photos: [{
       src: "./photos/houston-space-center.jpg",
       caption: "Shot on iPhone XR, June 10, 2023 | 4 mm, 1/5000, f/1.8, ISO 25"
-    }]
-  },
-
-  {
-    id: "kirkjufell",
-    name: "Arrowhead Mountain",
-    coords: [64.924568, -23.307352],
-    trip: "europe_22",
-    photos: [{
-      src: "./photos/kirkjufell.jpg",
-      caption: "Shot on iPhone XR, July 11, 2022 | 4 mm, 30, f/1.8, ISO 1"
     }]
   },
 
@@ -715,17 +660,6 @@ window.LOCATIONS = [
   },
 
   {
-    id: "puffin",
-    name: "Cliffside Home",
-    coords: [63.402479, -19.040492],
-    trip: "europe_22",
-    photos: [{
-      src: "./photos/puffin.jpg",
-      caption: "Shot on Canon PowerShot SX530 HS, July 12, 2022 | 215 mm, 1/160, f/6.5, ISO 640"
-    }]
-  },
-
-  {
     id: "red-rock-canyon",
     name: "Red Rocks",
     coords: [36.133079, -115.425623],
@@ -825,28 +759,6 @@ window.LOCATIONS = [
   },
 
   {
-    id: "sand-dune-arch",
-    name: "Sand Dune Arch",
-    coords: [38.764322, -109.581157],
-    trip: "cross-country",
-    photos: [{
-      src: "./photos/sand-dune-arch.jpg",
-      caption: "Shot on Canon PowerShot SX530 HS, June 14, 2023 | 5 mm, 1/100, f/4, ISO 200"
-    }]
-  },
-
-  {
-    id: "sanfransisco-skyline",
-    name: "Eye Spy Pier 39",
-    coords: [37.832456, -122.479792],
-    trip: "cross_country",
-    photos: [{
-      src: "./photos/sanfransisco-skyline.jpg",
-      caption: "Shot on Canon PowerShot SX530 HS, June 19, 2023 | 15 mm, 1/640, f/5, ISO 100"
-    }]
-  },
-
-  {
     id: "seljalandsfoss",
     name: "Seljalandsfoss",
     coords: [63.616932, -19.988952],
@@ -880,17 +792,6 @@ window.LOCATIONS = [
   },
 
   {
-    id: "shenandoah-view",
-    name: "Appalachian Hills",
-    coords: [38.597561, -78.370899],
-    trip: "east_coast",
-    photos: [{
-      src: "./photos/shenandoah-view.jpg",
-      caption: "Shot on Canon EOS R50, May 2, 2025 | 35 mm, 1/100, f/9, ISO 100"
-    }]
-  },
-
-  {
     id: "skogafoss",
     name: "Skogafoss",
     coords: [63.531908, -19.511291],
@@ -898,17 +799,6 @@ window.LOCATIONS = [
     photos: [{
       src: "./photos/skogafoss.jpg",
       caption: "Shot on FujiFilm QuickSnap 35mm, July 12, 2022 | Superia X-TRA 800 Film"
-    }]
-  },
-
-  {
-    id: "swiss-train",
-    name: "Swiss Time",
-    coords: [46.624679, 8.018505],
-    trip: "europe_22",
-    photos: [{
-      src: "./photos/swiss-train.jpg",
-      caption: "Shot on FujiFilm QuickSnap 35mm, July 17, 2022 | Superia X-TRA 800 Film"
     }]
   },
 
@@ -968,17 +858,6 @@ window.LOCATIONS = [
   },
 
   {
-    id: "zabriskie-point",
-    name: "Zabriskie Badlands",
-    coords: [36.420600, -116.811588],
-    trip: "cross_country",
-    photos: [{
-      src: "./photos/zabriskie-point.jpg",
-      caption: "Shot on Canon PowerShot SX530 HS, June 16, 2023 | 7 mm, 1/1000, f/5, ISO 125"
-    }]
-  },
-
-  {
     id: "zion-valley-2",
     name: "Peak Zion",
     coords: [37.269273, -112.947852],
@@ -998,6 +877,170 @@ window.LOCATIONS = [
       src: "./photos/zion-valley.jpg",
       caption: "Shot on Canon PowerShot SX530 HS, June 15, 2023 | 7 mm, 1/1000, f/5, ISO 200"
     }]
+  },
+
+  {
+    id: "antelope-island",
+    name: "Psuedo-Antelope",
+    coords: [41.011968, -112.223988],
+    trip: "utah_18",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on Canon PowerShot SX530 HS, July 7, 2018 | 18 mm, 1/1000, f/5, ISO 160"
+    }]
+  },
+
+  {
+    id: "bryce-canyon",
+    name: "Bryce Canyon",
+    coords: [37.612179, -112.169748],
+    trip: "utah_18",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on iPhone 6s, July 26, 2018 |4 mm, 1/3000, f/2.2, ISO 25"
+    }]
+  },
+
+  {
+    id: "bryce-tree",
+    name: "Tree Frame",
+    coords: [37.567088, -112.221716],
+    trip: "utah_18",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on Nikon D5000, July 26, 2018 |18 mm, 1/320, f/10, ISO 200"
+    }]
+  },
+
+  {
+    id: "canyonlands",
+    name: "Canyonlands",
+    coords: [38.429279, -109.929200],
+    trip: "utah_18",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on Nikon D5000, July 24, 2018 |18 mm, 1/500, f/11, ISO 500"
+    }]
+  },
+
+  {
+    id: "capitol-road",
+    name: "Capitol Road",
+    coords: [38.311842, -111.300016],
+    trip: "utah_18",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on Nikon D5000, July 25, 2018 |50 mm, 1/125, f/9, ISO 200"
+    }]
+  },
+
+  {
+    id: "mesa-arch",
+    name: "Mesa Arch",
+    coords: [38.388539, -109.865659],
+    trip: "utah_18",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on Nikon D5000, July 24, 2018 |18 mm, 1/250, f/11, ISO 500"
+    }]
+  },
+
+  {
+    id: "petroglyphs",
+    name: "Petroglyphs",
+    coords: [38.288350, -111.242362],
+    trip: "utah_18",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on Nikon D5000, July 25, 2018 |200 mm, 1/200, f/10, ISO 200"
+    }]
+  },
+
+  {
+    id: "rocky-mountain",
+    name: "Rocky Valley",
+    coords: [40.405375, -105.625413],
+    trip: "utah_18",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on Nikon D5000, July 19, 2018 |50 mm, 1/125, f/9, ISO 200"
+    }]
+  },
+
+  {
+    id: "sunset-canyon",
+    name: "Sunset Canyon",
+    coords: [38.376327, -109.886142],
+    trip: "utah_18",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on Nikon D5000, July 24, 2018 |18 mm, 1/250, f/4.5, ISO 500"
+    }]
+  },
+
+  {
+    id: "window-god",
+    name: "Backyard God",
+    coords: [38.869975, -104.888395],
+    trip: "utah_18",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on Nikon D5000, July 15, 2018 |18 mm, 1/1000, f/4, ISO 640"
+    }]
+  },
+
+  {
+    id: "chicago",
+    name: "The El",
+    coords: [41.891800, -87.620680],
+    trip: "north_south",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on iPhone 14, August 11, 2024 |6 mm, 1/1500, f/1.5, ISO 50"
+    }]
+  },
+
+  {
+    id: "lacrosse",
+    name: "Northern Bluffs",
+    coords: [44.009986, -91.252808],
+    trip: "north_south",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on iPhone 14, August 8, 2024 |6 mm, 1/1400, f/1.5, ISO 50"
+    }]
+  },
+
+  {
+    id: "madison",
+    name: "Square Garden",
+    coords: [43.074669, -89.381939],
+    trip: "north_south",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on iPhone 14, August 11, 2024 |6 mm, 1/1400, f/1.5, ISO 50"
+    }]
+  },
+
+  {
+    id: "mosaic",
+    name: "Cultural Mosaic",
+    coords: [41.884144, -87.624954],
+    trip: "north_south",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on iPhone 14, August 11, 2024 |6 mm, 1/3200, f/1.5, ISO 50"
+    }]
+  },
+
+  {
+    id: "shire",
+    name: "Mountain Shire",
+    coords: [35.768114, -83.616319],
+    trip: "north_south",
+    photos: [{
+      src: "./photos/zion-valley.jpg",
+      caption: "Shot on iPhone 14, August 12, 2024 |6 mm, 1/2400, f/1.5, ISO 50"
+    }]
   }
 ];
-
