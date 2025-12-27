@@ -367,21 +367,31 @@
     legend.onAdd = function () {
       const div = L.DomUtil.create("div", "tripLegend");
 
+      div.classList.add("collapsed"); // start collapsed
+
       const entries = Object.entries(TRIP_STYLES).filter(([k]) => k !== "default");
 
       div.innerHTML = `
-        <div class="tripLegendTitle">Legend</div>
-        ${entries
-          .map(
-            ([, val]) => `
+        <div class="tripLegendHeader">
+          <div class="tripLegendTitle">Legend</div>
+          <div class="tripLegendToggle">▸</div>
+        </div>
+
+        <div class="tripLegendBody">
+          ${entries.map(([, val]) => `
             <div class="tripLegendRow">
               <span class="tripLegendSwatch" style="background:${val.color}"></span>
               <span class="tripLegendText">${val.label}</span>
             </div>
-          `
-          )
-          .join("")}
+          `).join("")}
+        </div>
       `;
+      const header = div.querySelector(".tripLegendHeader");
+
+      header.addEventListener("click", () => {
+        div.classList.toggle("collapsed");
+      });
+
 
       // Prevent map drag/zoom when interacting with legend
       L.DomEvent.disableClickPropagation(div);
