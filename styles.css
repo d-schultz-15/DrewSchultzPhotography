@@ -650,3 +650,41 @@ body{
 html, body{
   overflow-x: hidden;
 }
+
+/* ---------------------------
+   Collapsible Legend
+--------------------------- */
+
+.tripLegend {
+  transition: box-shadow 0.2s ease;
+}
+
+/* Header row (clickable) */
+.tripLegendHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Arrow icon */
+.tripLegendToggle {
+  font-size: 14px;
+  opacity: 0.7;
+  transition: transform 0.25s ease;
+}
+
+/* Legend body */
+.tripLegendBody {
+  margin-top: 8px;
+}
+
+/* Collapsed state */
+.tripLegend.collapsed .tripLegendBody {
+  display: none;
+}
+
+.tripLegend.collapsed .tripLegendToggle {
+  transform: rotate(-90deg);
+}
