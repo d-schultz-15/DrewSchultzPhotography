@@ -962,7 +962,7 @@ window.LOCATIONS = [
     coords: [40.405375, -105.625413],
     trip: "utah_18",
     photos: [{
-      src: "./photos/rocky-mountain.jpg",
+      src: "./photos/rocky-mountains.jpg",
       caption: "Shot on Nikon D5000, July 19, 2018 |50 mm, 1/125, f/9, ISO 200"
     }]
   },
@@ -1044,3 +1044,4 @@ window.LOCATIONS = [
     }]
   }
 ];
+
